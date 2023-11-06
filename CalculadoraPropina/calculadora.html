@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Propina</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Calculadora Propina</h1>
+            <form id="tipForm">
+                <div class="form-group">
+                    <label for="numPersonas">Número de Comensales:</label>
+                    <input
+                        type="number"
+                        id="numPersonas"
+                        class="form-control"
+                        value="1"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="totalCuenta">Total de la Cuenta (€):</label>
+                    <input
+                        type="number"
+                        id="totalCuenta"
+                        class="form-control"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="calificacion">Calificación del Servicio:</label>
+                    <select id="calificacion" class="form-control" required>
+                        <option value="genial">Genial</option>
+                        <option value="aceptable">Aceptable</option>
+                        <option value="horrible">Horrible</option>
+                    </select>
+                </div>
+
+                <button
+                    type="submit"
+                    onclick="calcularPropina()"
+                    class="btn btn-primary"
+                >
+                    Calcular Propina
+                </button>
+            </form>
+        </div>
+
+        <br />
+
+        <div id="resultado"></div>
+    </body>
+</html>
